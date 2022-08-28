@@ -21,5 +21,19 @@
   <hr>
   <h2>Pages</h2>
   <h3>No students entered page:</h3>
-  ![ScreenShot](https://user-images.githubusercontent.com/83878779/187091165-fa27f318-50d0-4b88-bb9c-c60e502e2252.JPG)
+  
+  ![ScreenShot](/screenshots/NoStudentPage.JPG)
+  <p>Shown when there aren't any users in the database to fetch.</p>
+  <hr>
+  
+  ![ScreenShot](/screenshots/AddStudentPage.JPG)
+  
+  <p>Shown when user click "Add Student" button.</p>
+  <hr>
+  
+  ![ScreenShot](/screenshots/EditStudent.JPG)
+  
+  <p>Shown when user clicks the edit button on a specified user.</p>
 </body>
+
+
