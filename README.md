@@ -34,6 +34,19 @@
   ![ScreenShot](/screenshots/EditStudent.JPG)
   
   <p>Shown when user clicks the edit button on a specified user.</p>
+  <hr>
+  
+  ![ScreenShot](/screenshots/StudentTable.JPG)
+  
+  <p>Table is shown if fetch results return one or more students from mySQL.</p>
+
+  <hr>
+  <h2>Database ERD</h2>
+  
+  ![ScreenShot](/screenshots/mySQLdb.JPG)
+
+  <p>ERD showing how tables are related. For this demo, only the student table is being used.</p>
+  
 </body>
 
 
