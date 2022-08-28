@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { getAllStudents } from "./services/StudentService";
+import Layout from "./wrapper/Layout";
+import Table from "./components/Table";
+import { useEffect, useState, createContext } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AddOrEditStudentPage from "./components/pages/AddOrEditStudentPage";
+export const studentContext = createContext();
 function App() {
+  const [students, setStudents] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      setStudents(await getAllStudents());
+    }
+    fetchData();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <studentContext.Provider value={{ students, setStudents }}>
+        <Router>
+          <Routes>
+            <Route path="/" exact element={<Table />} />
+            <Route
+              path="/editStudent"
+              exact
+              element={<AddOrEditStudentPage />}
+            />
+          </Routes>
+        </Router>
+      </studentContext.Provider>
+    </Layout>
   );
 }
 
